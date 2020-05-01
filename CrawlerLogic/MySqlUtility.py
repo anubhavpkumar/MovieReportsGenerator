@@ -16,4 +16,7 @@ def ExecuteStatement(sqlStatement):
 def InsertMovieIntoDatabase(movieData, month, year):
     sqlString = "INSERT into movie (Name, URL, Rating, Month, Year) VALUES ('" + movieData.MovieName.replace("'","") + "','" + movieData.MovieUrl + "','" + str(movieData.MovieRating) + "','" + str(month) + "','" + str(year) + "');"
     ExecuteStatement(sqlString)
-    
+
+def InsertActorIntoDatabase(ActorData):
+    sqlString = "INSERT into actor (Name, imdb_id) VALUES ('" + ActorData.ActorName + "','" + ActorData.ActorImdbId + "')"
+    ExecuteStatement(sqlString)
