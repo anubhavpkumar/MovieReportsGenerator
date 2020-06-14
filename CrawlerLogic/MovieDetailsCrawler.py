@@ -14,6 +14,7 @@ class MovieDetailsCrawler:
 
     def PushRatingsToQueue(self, month, year):
         MovieNameAndUrlList = GetMovieNameAndUrl(month, year)
+        print (str(MovieNameAndUrlList))
         for movieNameAndUrl in MovieNameAndUrlList:
             movieData = MovieData.MovieData()
             movieData.MovieName = movieNameAndUrl["Name"]
